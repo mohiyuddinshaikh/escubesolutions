@@ -1,4 +1,5 @@
 import React from "react";
+import { OFFICIAL } from "../../constants";
 
 export default function ContactUs() {
   return (
@@ -6,12 +7,12 @@ export default function ContactUs() {
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-            Contact Us
+            Get in touch with us
           </h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+          {/* <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify.
-          </p>
+          </p> */}
         </div>
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
@@ -55,16 +56,12 @@ export default function ContactUs() {
             </div>
             <div class="p-2 w-full">
               <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Button
+                Send Message
               </button>
             </div>
             <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-              <a class="text-indigo-400">example@email.com</a>
-              <p class="leading-normal my-5">
-                49 Smith St.
-                <br />
-                Saint Cloud, MN 56301
-              </p>
+              <a class="text-indigo-400">{OFFICIAL.EMAIL}</a>
+              <p class="leading-normal mb-5">{OFFICIAL.PHONE_NUMBER}</p>
               <span class="inline-flex">
                 <a class="text-gray-500">
                   <svg

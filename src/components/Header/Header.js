@@ -1,10 +1,14 @@
 import React from "react";
 import { BRANDNAME } from "../../constants";
 import "./header.css";
+// import headerLogo from "../../assets/images/escube-header-logo.png";
 
-export default function Header() {
+export default function Header(props) {
+  const { isScrolled } = props;
   return (
-    <header class="text-gray-400 body-font">
+    <header
+      class={`text-gray-400 body-font main ${isScrolled ? "scrolled" : ""}`}
+    >
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
           <svg
@@ -19,7 +23,7 @@ export default function Header() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span class="ml-3 text-xl">Tailblocks</span>
+          <span class="ml-3 text-xl">{BRANDNAME}</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center menu-options">
           <a class="mr-5 hover:text-white">Home</a>

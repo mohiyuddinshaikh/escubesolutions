@@ -1,0 +1,45 @@
+.hero-container {
+  height: calc(100vh - 80px);
+}
+
+.img-container {
+  position: relative;
+}
+
+.img1 {
+  height: 240px;
+  width: 150px;
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  transform: rotate(28deg);
+}
+
+.img2 {
+  height: 240px;
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  transform: rotate(105deg);
+}
+
+.img3 {
+  height: 240px;
+  width: 150px;
+  position: absolute;
+}
+
+.img4 {
+  height: 240px;
+  width: 150px;
+  position: absolute;
+  left: 25%;
+  bottom: 15%;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 320px) {
+  .hero-container {
+    height: calc(100vh - 120px);
+  }
+}
