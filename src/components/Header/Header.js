@@ -5,6 +5,12 @@ import "./header.css";
 
 export default function Header(props) {
   const { isScrolled } = props;
+
+  const scroll = (pageSection) => {
+    const section = document.querySelector(`#${pageSection}`);
+    section.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <header
       class={`text-gray-400 body-font main ${isScrolled ? "scrolled" : ""}`}
@@ -26,10 +32,24 @@ export default function Header(props) {
           <span class="ml-3 text-xl">{BRANDNAME}</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center menu-options">
-          <a class="mr-5 hover:text-white">Home</a>
-          <a class="mr-5 hover:text-white">Our Work</a>
-          <a class="mr-5 hover:text-white">Testimonials</a>
-          <a class="mr-5 hover:text-white">Contact</a>
+          <a class="mr-5 hover:text-white" onClick={() => scroll("home")}>
+            Home
+          </a>
+          <a class="mr-5 hover:text-white" onClick={() => scroll("mission")}>
+            Mission
+          </a>
+          <a class="mr-5 hover:text-white" onClick={() => scroll("work")}>
+            Our Work
+          </a>
+          <a
+            class="mr-5 hover:text-white"
+            onClick={() => scroll("testimonials")}
+          >
+            Testimonials
+          </a>
+          <a class="mr-5 hover:text-white" onClick={() => scroll("contact")}>
+            Contact
+          </a>
         </nav>
       </div>
     </header>

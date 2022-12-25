@@ -16,7 +16,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section class="text-gray-400 body-font">
+    <section class="text-gray-400 body-font bg-gray-900" id="testimonials">
       <div class="container px-5 py-24 mx-auto">
         <h1 class="text-3xl font-medium title-font text-white mb-12 text-center">
           Testimonials

@@ -6,6 +6,7 @@ import OurWork from "./components/OurWork/ourWork";
 import Testimonials from "./components/Testimonials/testimonials";
 import ContactUs from "./components/ContactUs/contactUs";
 import { useEffect, useState } from "react";
+import Mission from "./components/Mission/mission";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,7 @@ function App() {
     <div className="primary-container">
       <Header isScrolled={isScrolled} />
       <Hero />
+      <Mission />
       <OurWork />
       <Testimonials />
       <ContactUs />

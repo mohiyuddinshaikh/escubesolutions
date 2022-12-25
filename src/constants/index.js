@@ -14,4 +14,6 @@ const IMAGES = {
     "https://ik.imagekit.io/afi283alh/vegeta.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671258719138",
 };
 
-export { BRANDNAME, COLOR, IMAGES, OFFICIAL };
+const COUNTRY_CODE = "+91";
+
+export { BRANDNAME, COLOR, IMAGES, OFFICIAL, COUNTRY_CODE };

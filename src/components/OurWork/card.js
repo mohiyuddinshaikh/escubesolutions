@@ -4,7 +4,6 @@ import Tooltip from "react-simple-tooltip";
 import { COLOR, IMAGES } from "../../constants";
 
 export default function Card({ project }) {
-  console.log("project.img", project.img);
   return (
     <div class="xl:w-1/3 md:w-1/2 p-4">
       <div class="rounded-lg shadow-lg bg-white max-w-sm">
