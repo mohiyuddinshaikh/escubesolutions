@@ -1,43 +1,59 @@
 import React from "react";
 import { BRANDNAME } from "../../constants";
 import "./header.css";
-import headerLogo from "../../assets/images/plain.png";
 import LogoSVG from "../../assets/icons/LogoSVG";
+import { useMobileOrientation } from "react-device-detect";
+import { scrollToSection } from "../../helpers/helperFunctions";
 
 export default function Header(props) {
   const { isScrolled } = props;
-
-  const scroll = (pageSection) => {
-    const section = document.querySelector(`#${pageSection}`);
-    section.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
+  const { isPortrait } = useMobileOrientation();
 
   return (
     <header
-      class={`text-gray-400 body-font main ${isScrolled ? "scrolled" : ""}`}
+      className={`text-gray-400 body-font main ${
+        isScrolled || isPortrait ? "scrolled" : ""
+      }`}
     >
-      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
+        <a
+          onClick={() => scrollToSection("home")}
+          className="flex title-font font-medium items-center text-white mb-4 md:mb-0 cursor-pointer"
+        >
           <LogoSVG />
-          <span class="ml-3 text-xl">{BRANDNAME}</span>
+          <span className="ml-3 text-xl cursor-pointer">{BRANDNAME}</span>
         </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center menu-options">
-          <a class="mr-5 hover:text-white" onClick={() => scroll("home")}>
-            Home
-          </a>
-          <a class="mr-5 hover:text-white" onClick={() => scroll("mission")}>
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center menu-options">
+          {!isPortrait ? (
+            <a
+              className="mr-5 hover:text-white"
+              onClick={() => scrollToSection("home")}
+            >
+              Home
+            </a>
+          ) : null}
+          <a
+            className="mr-5 hover:text-white"
+            onClick={() => scrollToSection("mission")}
+          >
             Mission
           </a>
-          <a class="mr-5 hover:text-white" onClick={() => scroll("work")}>
+          <a
+            className="mr-5 hover:text-white"
+            onClick={() => scrollToSection("work")}
+          >
             Our Work
           </a>
           <a
-            class="mr-5 hover:text-white"
-            onClick={() => scroll("testimonials")}
+            className="mr-5 hover:text-white"
+            onClick={() => scrollToSection("testimonials")}
           >
             Testimonials
           </a>
-          <a class="mr-5 hover:text-white" onClick={() => scroll("contact")}>
+          <a
+            className="mr-5 hover:text-white"
+            onClick={() => scrollToSection("contact")}
+          >
             Contact
           </a>
         </nav>

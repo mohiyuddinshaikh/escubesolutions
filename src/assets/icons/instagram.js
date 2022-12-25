@@ -3,7 +3,7 @@ import React from "react";
 export default function Instagram() {
   return (
     <a
-      class="ml-4 hover:text-pink-500"
+      className="ml-4 hover:text-pink-500"
       target="_blank"
       href="https://www.instagram.com/escubesolutions/"
     >
@@ -13,7 +13,7 @@ export default function Instagram() {
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
-        class="w-6 h-6"
+        className="w-6 h-6"
         viewBox="0 0 24 24"
       >
         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
