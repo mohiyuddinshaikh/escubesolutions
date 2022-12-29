@@ -8,12 +8,14 @@ export default function Mission() {
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
             Our Mission
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
+          <div className="lg:w-2/3 mx-auto leading-relaxed text-lg">
             We understand the needs of modern businesses, You are either online
             or you do not exist. We want to help businesses new and old get
             online and be with you every step of this journey. Concept, Design,
-            Build, Deploy. We got you!
-          </p>
+            Build, Deploy...
+            <br />
+            <div className="text-lg uppercase italic pt-1">We Got You !</div>
+          </div>
         </div>
       </div>
     </section>
